@@ -8,7 +8,7 @@ const CONFIG = {
 
   // วาง URL สำหรับฝัง (Embed) รายงานจาก Looker Studio
   // Looker Studio > เปิดรายงาน > Share > Embed report > คัดลอกลิงก์ใน src="..."
-  LOOKER_STUDIO_EMBED_URL: '',
+  LOOKER_STUDIO_EMBED_URL: 'https://datastudio.google.com/embed/reporting/394f3270-beea-4488-9c1b-9a69056f6e0d/page/p_32gecjcb3d',
 
   // ความถี่ในการดึงข้อมูลใหม่อัตโนมัติ (มิลลิวินาที)
   REFRESH_INTERVAL_MS: 60000,
