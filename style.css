@@ -351,20 +351,45 @@ hr { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
 }
 
 /* ---------- Looker section ---------- */
-.looker-section {
-  padding: 0 24px 32px;
+.looker-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
 .looker-section h2 {
   font-size: 14px;
   letter-spacing: 0.06em;
   color: var(--text-muted);
-  margin-bottom: 12px;
+}
+.looker-toggle-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-panel-alt);
+  color: var(--accent);
+  cursor: pointer;
+}
+.looker-toggle-btn:hover { border-color: var(--accent); }
+
+.looker-frame-wrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: height 0.25s ease;
+  height: 480px;
+}
+.looker-embed--compact .looker-frame-wrap {
+  height: 260px;
 }
 .looker-section iframe {
   width: 100%;
-  height: 480px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  height: 100%;
+  border: none;
+  display: block;
 }
 .looker-placeholder {
   border: 1px dashed var(--border);
