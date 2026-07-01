@@ -380,10 +380,10 @@ hr { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
   border-radius: 12px;
   overflow: hidden;
   transition: height 0.25s ease;
-  height: 480px;
+  height: 400px;
 }
 .looker-embed--compact .looker-frame-wrap {
-  height: 260px;
+  height: 140px;
 }
 .looker-section iframe {
   width: 100%;
