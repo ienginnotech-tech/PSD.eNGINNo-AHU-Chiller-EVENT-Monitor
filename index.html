@@ -4,10 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AHU & Chilled Water System — Exhibition Hall Zone Dashboard</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <header class="topbar">
   <div class="brand">
     <h1>AHU CONTROL &amp; CHILLED WATER SYSTEM</h1>
@@ -16,36 +15,29 @@
   <div class="kpi-strip" id="kpi-strip"></div>
   <div class="clock" id="clock"></div>
 </header>
-
 <main class="layout">
   <section class="left-col">
     <div class="panel chiller-panel" id="chiller-panel"></div>
     <div class="panel legend-panel" id="legend-panel"></div>
     <div class="panel zone-control-panel" id="zone-control-panel"></div>
   </section>
-
   <section class="zones-grid" id="zones-grid"></section>
-
   <aside class="right-col">
     <div class="panel quickview-panel" id="quickview-panel"></div>
     <div class="panel alarms-panel" id="alarms-panel"></div>
   </aside>
 </main>
-
 <section class="summary-strip" id="summary-strip"></section>
-
 <section class="looker-section">
   <h2>LOOKER STUDIO — ENERGY &amp; TREND REPORT</h2>
   <div id="looker-embed"></div>
 </section>
-
 <footer>
   AHU &amp; Chilled Water Zone Dashboard · ข้อมูลจาก Google Sheets ผ่าน Apps Script API · Diagram not to scale
 </footer>
-
-<script src="js/config.js"></script>
-<script src="js/mock-data.js"></script>
-<script src="js/data-service.js"></script>
-<script src="js/dashboard.js"></script>
+<script src="config.js"></script>
+<script src="mock-data.js"></script>
+<script src="data-service.js"></script>
+<script src="dashboard.js"></script>
 </body>
 </html>
