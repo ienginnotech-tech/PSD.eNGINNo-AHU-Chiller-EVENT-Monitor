@@ -213,11 +213,24 @@ function pct(v, total) {
   return Math.round((v / total) * 100);
 }
 
+let lookerExpanded = false;
+
 function renderLookerEmbed() {
   const el = document.getElementById('looker-embed');
+  const btn = document.getElementById('looker-toggle-btn');
+
   if (CONFIG.LOOKER_STUDIO_EMBED_URL && CONFIG.LOOKER_STUDIO_EMBED_URL.trim() !== '') {
-    el.innerHTML = `<iframe src="${CONFIG.LOOKER_STUDIO_EMBED_URL}" allowfullscreen></iframe>`;
+    el.innerHTML = `<div class="looker-frame-wrap"><iframe src="${CONFIG.LOOKER_STUDIO_EMBED_URL}" allowfullscreen></iframe></div>`;
+    el.classList.toggle('looker-embed--compact', !lookerExpanded);
+    btn.style.display = 'inline-block';
+    btn.textContent = lookerExpanded ? 'ย่อขนาด' : 'ขยายขนาด';
+    btn.onclick = function () {
+      lookerExpanded = !lookerExpanded;
+      el.classList.toggle('looker-embed--compact', !lookerExpanded);
+      btn.textContent = lookerExpanded ? 'ย่อขนาด' : 'ขยายขนาด';
+    };
   } else {
+    btn.style.display = 'none';
     el.innerHTML = `<div class="looker-placeholder">
       <p>ยังไม่ได้เชื่อมต่อ Looker Studio</p>
       <p class="muted small">สร้างรายงานใน Looker Studio โดยใช้ Google Sheets นี้เป็นแหล่งข้อมูล จากนั้นคัดลอกลิงก์ Embed มาใส่ใน <code>js/config.js → LOOKER_STUDIO_EMBED_URL</code></p>
