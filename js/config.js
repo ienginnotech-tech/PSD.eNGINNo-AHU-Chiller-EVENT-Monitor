@@ -4,7 +4,7 @@
 const CONFIG = {
   // วาง URL ที่ได้จากการ Deploy Google Apps Script เป็น Web App (ดูขั้นตอนใน README.md)
   // ถ้าปล่อยว่าง ระบบจะโชว์ข้อมูลตัวอย่าง (mock-data.js) แทน
-  SHEETS_API_URL: '',
+  SHEETS_API_URL: 'https://script.google.com/macros/s/AKfycbxuTPca5he7y6hUsWCdPlJxRpPsJEe_XH6ULz7W6SXIxtMt2EQaG_28KyKew_frJzPF/exec',
 
   // วาง URL สำหรับฝัง (Embed) รายงานจาก Looker Studio
   LOOKER_STUDIO_EMBED_URL: '',
