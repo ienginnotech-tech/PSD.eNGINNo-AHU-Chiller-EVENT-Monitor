@@ -3,41 +3,67 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AHU & Chilled Water System — Exhibition Hall Zone Dashboard</title>
-<link rel="stylesheet" href="style.css" />
+<title>AHU & Chiller Plant System — BITEC Zone Dashboard</title>
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
 <header class="topbar">
   <div class="brand">
-    <h1>AHU CONTROL &amp; CHILLED WATER SYSTEM</h1>
-    <p>EXHIBITION HALL — ZONE DASHBOARD <span id="live-badge" class="badge">● DEMO DATA</span></p>
+    <h1>AHU &amp; CHILLER PLANT SYSTEM</h1>
+    <p>BITEC — EXHIBITION &amp; CONVENTION DASHBOARD <span id="live-badge" class="badge">● DEMO DATA</span></p>
   </div>
-  <div class="kpi-strip" id="kpi-strip"></div>
   <div class="clock" id="clock"></div>
 </header>
+
+<!-- ============ CHILLER PLANT SECTION (บนสุด) ============ -->
+<section class="cp-section">
+  <div class="section-title-bar">CHILLER PLANT OVERVIEW</div>
+  <div class="cp-kpi-strip" id="cp-kpi-strip"></div>
+
+  <div class="panel cp-loop-panel cp-loop-panel--full" id="cp-efficiency-panel"></div>
+
+  <div class="panel cp-loop-panel cp-loop-panel--full" id="plant-flow-panel"></div>
+</section>
+
+<!-- ============ AHU ZONE SECTION (ย้ายลงมา) ============ -->
+<section class="section-title-bar">AHU ZONE DASHBOARD</section>
+<div class="kpi-strip" id="kpi-strip"></div>
+
 <main class="layout">
   <section class="left-col">
-    <div class="panel chiller-panel" id="chiller-panel"></div>
     <div class="panel legend-panel" id="legend-panel"></div>
     <div class="panel zone-control-panel" id="zone-control-panel"></div>
   </section>
+
   <section class="zones-grid" id="zones-grid"></section>
+
   <aside class="right-col">
     <div class="panel quickview-panel" id="quickview-panel"></div>
     <div class="panel alarms-panel" id="alarms-panel"></div>
   </aside>
 </main>
+
 <section class="summary-strip" id="summary-strip"></section>
+
+<!-- ============ AREA EFFICIENCY SECTION ============ -->
+<section class="area-efficiency-section">
+  <div class="section-title-bar">AREA ENERGY EFFICIENCY</div>
+  <div class="panel" id="area-efficiency-table"></div>
+</section>
+
 <section class="looker-section">
   <h2>LOOKER STUDIO — ENERGY &amp; TREND REPORT</h2>
   <div id="looker-embed"></div>
 </section>
+
 <footer>
-  AHU &amp; Chilled Water Zone Dashboard · ข้อมูลจาก Google Sheets ผ่าน Apps Script API · Diagram not to scale
+  AHU &amp; Chiller Plant Dashboard · BITEC · ข้อมูลจาก Google Sheets ผ่าน Apps Script API · Diagram not to scale
 </footer>
-<script src="config.js"></script>
-<script src="mock-data.js"></script>
-<script src="data-service.js"></script>
-<script src="dashboard.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/mock-data.js"></script>
+<script src="js/data-service.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
